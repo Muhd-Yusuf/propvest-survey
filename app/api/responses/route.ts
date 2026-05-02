@@ -3,7 +3,11 @@ import clientPromise from '@/lib/mongodb';
 
 export async function GET(req: NextRequest) {
   const key = req.nextUrl.searchParams.get('key');
-  if (key !== process.env.DASHBOARD_KEY) {
+  const dashKey = process.env.DASHBOARD_KEY;
+  if (!dashKey) {
+    return NextResponse.json({ error: 'DASHBOARD_KEY not set' }, { status: 500 });
+  }
+  if (key !== dashKey) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
