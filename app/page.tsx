@@ -213,39 +213,39 @@ export default function SurveyPage() {
   // ── LANDING ──
   if (step === 0) {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center px-4">
-        <div className="text-center max-w-lg">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00D4AA] to-[#00B894] flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
+      <main className="min-h-screen flex flex-col items-center justify-center px-5 py-10">
+        <div className="text-center max-w-lg w-full">
+          <div className="inline-flex items-center gap-2 mb-5">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#00D4AA] to-[#00B894] flex items-center justify-center">
+              <span className="text-white font-bold text-base">P</span>
             </div>
-            <span className="text-2xl font-bold tracking-tight">PropVest</span>
+            <span className="text-xl font-bold tracking-tight">PropVest</span>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 leading-snug">
             Our research shows that{" "}
             <span className="text-[#00D4AA]">8 out of 10 Nigerians</span>{" "}
             want to invest in real estate, but almost nobody has ₦50M
             to buy land or property outright.
           </h1>
 
-          <div className="text-left max-w-md mx-auto space-y-4 mb-6">
+          <div className="text-left max-w-md mx-auto space-y-3 mb-5">
             <p className="text-white/60 text-sm leading-relaxed">
               Let&apos;s be honest. You&apos;ve thought about investing in
               property before. Maybe you even looked into it. But then you saw
-              the prices and realized it&apos;s not for &ldquo;people like
-              us&rdquo; yet. ₦20M, ₦50M, ₦100M. Where that kind of money dey?
+              the prices and thought &ldquo;this one no be for my level yet.&rdquo;
+              ₦20M, ₦50M, ₦100M. Where that kind money dey?
             </p>
             <p className="text-white/60 text-sm leading-relaxed">
               Meanwhile, developers are building estates, landlords are
-              collecting rent, and property keeps appreciating every single year.
-              The opportunity is right there. You just can&apos;t access it.
+              collecting rent, property keeps going up every year. The
+              opportunity is right there. You just can&apos;t access it.
             </p>
             <p className="text-white/50 text-sm leading-relaxed">
               <span className="text-[#00D4AA] font-semibold">PropVest</span>{" "}
               is changing that. We&apos;re connecting everyday people with
               trusted, verified developers so you can invest what you have, join
               others, and own your share of a real property with proper
-              documentation and real returns.
+              documents and real returns.
             </p>
           </div>
 
@@ -256,14 +256,14 @@ export default function SurveyPage() {
 
           <button
             onClick={() => setStep(1)}
-            className="mt-8 px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#00D4AA] to-[#00B894] text-white font-semibold text-sm hover:opacity-90 transition-opacity cursor-pointer"
+            className="mt-6 w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[#00D4AA] to-[#00B894] text-white font-semibold text-sm hover:opacity-90 transition-opacity cursor-pointer"
           >
-            That&apos;s me — I want in
+            That&apos;s me, I want in
           </button>
           <p className="text-white/25 text-xs mt-3">Takes less than 2 minutes</p>
 
           {responseCount > 0 && (
-            <p className="mt-6 text-xs text-white/30">
+            <p className="mt-5 text-xs text-white/30">
               <span className="text-[#00D4AA] font-semibold">{responseCount}</span>{" "}
               {responseCount === 1 ? "person has" : "people have"} responded so far
             </p>
@@ -311,10 +311,10 @@ export default function SurveyPage() {
 
   // ── SURVEY FORM ──
   return (
-    <main className="min-h-screen py-8 px-4">
+    <main className="min-h-screen py-6 sm:py-8 px-5">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => setStep(0)}
             className="text-sm text-white/40 hover:text-white/70 transition-colors flex items-center gap-1 cursor-pointer"
@@ -333,7 +333,7 @@ export default function SurveyPage() {
         </div>
 
         {/* Context banner */}
-        <div className="rounded-xl border border-[#00D4AA]/20 bg-[#00D4AA]/[0.04] px-5 py-4 mb-8">
+        <div className="rounded-xl border border-[#00D4AA]/20 bg-[#00D4AA]/[0.04] px-4 py-3.5 sm:px-5 sm:py-4 mb-6">
           <p className="text-sm text-white/70 leading-relaxed">
             <span className="text-[#00D4AA] font-semibold">How PropVest works:</span>{" "}
             Trusted developers list their property projects on our platform. You invest
@@ -477,11 +477,11 @@ export default function SurveyPage() {
           </Q>
 
           {/* Submit */}
-          <div className="pt-4 pb-8">
+          <div className="pt-4 pb-10">
             <button
               onClick={submit}
               disabled={submitting}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#00D4AA] to-[#00B894] text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
+              className="w-full py-4 rounded-xl bg-gradient-to-r from-[#00D4AA] to-[#00B894] text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
             >
               {submitting ? "Submitting..." : "Submit"}
             </button>

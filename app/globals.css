@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   background: #0a0a0a;
   color: #ededed;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Custom selection styling */
@@ -15,4 +20,11 @@ input[type="radio"]:checked + label,
 input[type="checkbox"]:checked + label {
   border-color: #00D4AA;
   background: rgba(0, 212, 170, 0.08);
+}
+
+/* Prevent iOS zoom on input focus */
+@media (max-width: 767px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
 }

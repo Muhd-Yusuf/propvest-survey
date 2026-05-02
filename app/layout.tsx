@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: "Help us build the future of real estate investing in Nigeria",
     type: "website",
   },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
 };
 
 export default function RootLayout({
