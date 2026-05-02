@@ -33,8 +33,9 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ success: true });
-  } catch {
-    return NextResponse.json({ success: false, error: 'Failed to save' }, { status: 500 });
+  } catch (e) {
+    console.error('Submit error:', e);
+    return NextResponse.json({ success: false, error: String(e) }, { status: 500 });
   }
 }
 
