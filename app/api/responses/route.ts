@@ -3,7 +3,7 @@ import clientPromise from '@/lib/mongodb';
 
 export async function GET(req: NextRequest) {
   const key = req.nextUrl.searchParams.get('key');
-  const dashKey = process.env.DASHBOARD_KEY || 'propvest2024';
+  const dashKey = (process.env.DASHBOARD_KEY || 'propvest2024').trim();
   if (key !== dashKey) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
